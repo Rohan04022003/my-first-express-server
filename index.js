@@ -1,7 +1,9 @@
+import 'dotenv/config' //iska yahi rule hai import krne ka
+
 import express from "express";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 //yeh middleware hai jo json enable krta hai mere server ko use krne ke liye
 app.use(express.json());
